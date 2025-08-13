@@ -1,0 +1,177 @@
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto/static/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("./assets/fonts/Roboto/static/Roboto-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("./assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-family: "PlayfairDisplay";
+}
+
+p{
+    font-family: "Roboto-Light", sans-serif;
+    font-weight: 100;
+}
+
+header {
+    background: linear-gradient(
+    170deg, 
+    #0891b2 0%,
+    #0891b2 66%,
+    transparent 66%,
+    transparent 100%  
+    );
+    color: white;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*Card*/
+.card-portret {
+    background-image: url("assets/img/portret-1.jpg");
+    min-width: 400px;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 3px 3px 20px 0.5px rgba(0, 0, 0, 0.3);
+}
+
+.card-portret h1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;   
+    right: 0;     
+    padding: 0.5rem;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.card-about{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 3px 3px 20px 0.5px rgba(0, 0, 0, 0.3);
+    padding: 30px 15px;
+    gap:25px;
+    height: min-content;
+}
+
+.card-about-icons {
+    padding: 50px 15px 0px;
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+}
+
+.card-about-icons i, 
+.card-about-icons img {
+    font-size: 30px;
+    width: 30px;
+    filter: brightness(0%);
+}
+
+/*Projects*/
+.projects {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  padding-bottom: 2rem 1rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  flex-grow: 1;
+}
+
+.project-card {
+  background: white;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-name {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-name h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.project-name a {
+  margin-left: 0.5rem;
+  color: #555;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.project-name a:hover {
+  color: #0891b2;
+}
+
+.project-icons{
+    display: flex;
+}
+
+.project-description {
+  padding: 0 1rem 1rem 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
